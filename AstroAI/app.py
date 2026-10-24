@@ -1,8 +1,10 @@
 import customtkinter as ctk
 import threading
+import ctypes
 import ollama
 import json
 import os
+import subprocess
 import re
 import sympy as sp
 import hashlib
@@ -25,6 +27,29 @@ USERS_FILE = os.path.join(DATA_DIR, "users.json")
 SESSION_FILE = os.path.join(DATA_DIR, "session.json")
 
 os.makedirs(DATA_DIR, exist_ok=True)
+def start_ollama():
+    import urllib.request
+    import urllib.error
+
+    try:
+        urllib.request.urlopen(
+            "http://localhost:11434",
+            timeout=2
+        )
+        print("Az Ollama szerver már fut.")
+
+    except (urllib.error.URLError, TimeoutError):
+        try:
+            subprocess.Popen(
+                ["ollama", "serve"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                creationflags=subprocess.CREATE_NO_WINDOW
+            )
+            print("Az Ollama szerver indítása...")
+
+        except FileNotFoundError:
+            print("HIBA: Az Ollama nem található. Ellenőrizd a telepítést!")
 
 
 # =========================================================
@@ -956,10 +981,16 @@ class LoginWindow(ctk.CTkToplevel):
 class AstroAIApp(ctk.CTk):
     def __init__(self):
         super().__init__()
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+    "AstroAI.Desktop.App"
+)
 
         self.withdraw()
 
         self.title("AstroAI")
+        self.iconbitmap(
+    os.path.join(BASE_DIR, "astroai_logo.ico")
+)
         self.geometry("1200x760")
         self.minsize(900, 600)
 
@@ -976,6 +1007,8 @@ class AstroAIApp(ctk.CTk):
         self.streaming_frame = None
 
         self.login_window = None
+
+        start_ollama()
 
         self.after(
             100,
