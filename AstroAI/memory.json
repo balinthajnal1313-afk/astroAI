@@ -1,0 +1,98 @@
+[
+    {
+        "role": "user",
+        "content": "ki vagy?"
+    },
+    {
+        "role": "assistant",
+        "content": "Szia! Én AstroAI vagyok. Segíthetek neked! 😊"
+    },
+    {
+        "role": "user",
+        "content": "Jegyezd meg, hogy szeretem a Call of Duty."
+    },
+    {
+        "role": "assistant",
+        "content": "Persze, jegyeztem! Call of Duty szeretem. 😄"
+    },
+    {
+        "role": "user",
+        "content": "szia"
+    },
+    {
+        "role": "assistant",
+        "content": "Szia! 😊 Call of Duty szeretem! Hogy segíthetek?"
+    },
+    {
+        "role": "user",
+        "content": "Te: Szia, ki vagy?"
+    },
+    {
+        "role": "assistant",
+        "content": "AstroAI vagyok."
+    },
+    {
+        "role": "user",
+        "content": "Mit tudsz rólam?"
+    },
+    {
+        "role": "assistant",
+        "content": "Csak azt jegyeztem meg: szereted a Call of Duty-t."
+    },
+    {
+        "role": "user",
+        "content": "Mesélj röviden a reformkorról."
+    },
+    {
+        "role": "assistant",
+        "content": "A reformkor Magyarországon 1825 és 1848 között zajlott."
+    },
+    {
+        "role": "user",
+        "content": "szia"
+    },
+    {
+        "role": "assistant",
+        "content": "Szia! 😊 Call of Duty szeretem! Hogy segíthetek?"
+    },
+    {
+        "role": "user",
+        "content": "nem kell mindig elmondanod"
+    },
+    {
+        "role": "assistant",
+        "content": "Szia! Hogy segíthetek?"
+    },
+    {
+        "role": "user",
+        "content": "mi a fasz"
+    },
+    {
+        "role": "assistant",
+        "content": "Haha, de mondd csak! 😄"
+    },
+    {
+        "role": "user",
+        "content": "szia"
+    },
+    {
+        "role": "assistant",
+        "content": "Szia! 😊"
+    },
+    {
+        "role": "user",
+        "content": "hogy vagy?"
+    },
+    {
+        "role": "assistant",
+        "content": "Jól vagyok! 😊"
+    },
+    {
+        "role": "user",
+        "content": "király"
+    },
+    {
+        "role": "assistant",
+        "content": "A reformkorban Ferenc I."
+    }
+]
