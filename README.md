@@ -1,9 +1,6 @@
 welcome to astroAI!
 -----------------
 This is my own AI powered by ollama.
-when you first open it you need to type this to
-windows powershell:
-ollama serve
 ------------------
 to start the astroAI double click to app.py
 ------------------
@@ -18,9 +15,6 @@ language is hungarian.
 Üdvözöl az AstroAI!
 -----------------
 Ez a saját, Ollama által működtetett mesterséges intelligenciám.
-------------------
-Amikor először indítod el, írd be ezt a Windows PowerShellbe:
-`ollama serve`
 ------------------
 Az AstroAI elindításához kattints duplán az `app.py` fájlra.
 ------------------
